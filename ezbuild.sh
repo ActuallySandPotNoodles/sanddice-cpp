@@ -1,5 +1,5 @@
 git clone https://github.com/ActuallySandPotNoodles/sanddice-cpp.git
-cd sanddice
+cd sanddice-cpp
 mkdir build
 cd build
 cmake ..
