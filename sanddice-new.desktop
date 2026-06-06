@@ -1,11 +1,11 @@
 [Desktop Entry]
 Type=Application
 
-Name=SandDice (Python Version)
-Exec=/usr/bin/sanddice-py
+Name=SandDice
+Exec=/usr/bin/sanddice
 Icon=/usr/share/sandpotnoodles/sanddice.png
 
-Comment=Original Python Version of my dice app in the eyemint design language
+Comment=A dice app in the eyemint design language, wrote in C++
 
 Categories=Utility
 Keywords=mintmix;sandpotnoodles;random;dice;qt6
