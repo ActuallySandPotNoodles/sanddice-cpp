@@ -21,6 +21,8 @@
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QWidget>
+#include <QGraphicsDropShadowEffect>
+
 
 QT_BEGIN_NAMESPACE
 
@@ -58,6 +60,11 @@ public:
     QLabel *coin_current;
     QSpacerItem *verticalSpacer_5;
     QPushButton *cflip_btn;
+    QGraphicsEffect *glow;
+    QGraphicsEffect *glow2;
+    QGraphicsEffect *glow3;
+    QGraphicsEffect *glow4;
+    QGraphicsEffect *glow5;
 
     void setupUi(QWidget *Form)
     {
@@ -260,6 +267,33 @@ public:
 
 
         QMetaObject::connectSlotsByName(Form);
+
+        QGraphicsDropShadowEffect *glow = new QGraphicsDropShadowEffect();
+        glow->setOffset(0, 0);
+        glow->setBlurRadius(35);
+        glow->setColor(QColor(255, 255, 255));
+        ttl1->setGraphicsEffect(glow);
+        QGraphicsDropShadowEffect *glow2 = new QGraphicsDropShadowEffect();
+        glow2->setOffset(0, 0);
+        glow2->setBlurRadius(35);
+        glow2->setColor(QColor(255, 255, 255));
+        ttl2->setGraphicsEffect(glow2);
+        QGraphicsDropShadowEffect *glow3 = new QGraphicsDropShadowEffect();
+        glow3->setOffset(0, 0);
+        glow3->setBlurRadius(35);
+        glow3->setColor(QColor(255, 255, 255));
+        ttl2_2->setGraphicsEffect(glow3);
+        QGraphicsDropShadowEffect *glow4 = new QGraphicsDropShadowEffect();
+        glow4->setOffset(0, 0);
+        glow4->setBlurRadius(25);
+        glow4->setColor(QColor(255, 255, 255));
+        coin_current->setGraphicsEffect(glow4);
+        QGraphicsDropShadowEffect *glow5 = new QGraphicsDropShadowEffect();
+        glow5->setOffset(0, 0);
+        glow5->setBlurRadius(25);
+        glow5->setColor(QColor(255, 255, 255));
+        astring->setGraphicsEffect(glow5);
+
     } // setupUi
 
     void retranslateUi(QWidget *Form)
