@@ -8,7 +8,7 @@ Oh and it's finally resizeable!
 
 ![Screenshot](screenshot.png)
 
-**Where's the glow?!**  not figured that out yet
+<s>**Where's the glow?!**  not figured that out yet</s>
 
 ## Installation
 Run the install.sh script or run the following in the terminal
@@ -16,8 +16,6 @@ Run the install.sh script or run the following in the terminal
 `sudo curl https://raw.githubusercontent.com/ActuallySandPotNoodles/sanddice-cpp/refs/heads/main/install.sh | sudo bash`
 
 This should work on both aarch64 (armv8) and x86_64 devices
-
-**Hold on I haven't built it yet** (how do i strike-through in markdown)
 
 The install script will have to be run as root because it places files into the /usr directory
 ## Building
