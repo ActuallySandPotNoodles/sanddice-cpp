@@ -33,6 +33,7 @@ public:
         QObject::connect(ui.clear_btn, &QPushButton::clicked, this, &MainWindow::clear_func);
         QObject::connect(ui.pushButton, &QPushButton::clicked, this, &MainWindow::string_roll);
         QObject::connect(ui.cflip_btn, &QPushButton::clicked, this, &MainWindow::coin_flip);
+
     }
     int diceroll() {
         int dmin, dmax, dnum;
