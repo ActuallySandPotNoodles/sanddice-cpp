@@ -15,6 +15,10 @@ Run the install.sh script or run the following in the terminal
 
 `sudo curl https://raw.githubusercontent.com/ActuallySandPotNoodles/sanddice-cpp/refs/heads/main/install.sh | sudo bash`
 
+Or you can use the arch package if your on arch:
+
+`sudo pacman -U sanddice-1.0.0-1-x86_64.pkg.tar.gz`
+
 This should work on both aarch64 (armv8) and x86_64 devices
 
 The install script will have to be run as root because it places files into the /usr directory
