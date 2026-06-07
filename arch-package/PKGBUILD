@@ -1,0 +1,27 @@
+#Maintainer: <bobclananimations@gmail.com> //getting a new email address at some point
+pkgname=sanddice
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="A simple dice app in the Eyemint design language. Made for MintMix"
+arch=('x86_64')
+url="https://github.com/ActuallySandPotNoodles/sanddice-cpp"
+license=('GPL3')
+depends=('qt6-base')
+makedepends=('cmake')
+source=("sanddice-${pkgver}.tar.xz" "sanddice-new.desktop" "sanddice.png")
+sha256sums=('SKIP' 'SKIP' 'SKIP')
+
+build() {
+  cmake -B build -S "$pkgname-$pkgver" \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=/usr
+  cmake --build build
+}
+
+package() {
+  DESTDIR="$pkgdir" cmake --install build
+  install -Dm644 "$srcdir/sanddice.png" \
+  	"$pkgdir/usr/share/sandpotnoodles/sanddice.png"
+  install -Dm644 "$srcdir/sanddice-new.desktop" \
+    "$pkgdir/usr/share/applications/sanddice-new.desktop"
+}
