@@ -39,6 +39,12 @@ sanddice_cpp (rename it to sanddice) in `/usr/bin/sanddice`
 sanddice.png in `/usr/share/sandpotnoodles/sanddice.png`
 sanddice.desktop in `/usr/share/sandpotnoodles/sanddice.desktop`
 
+### Building the Arch package
+
+Change the `arch=('x86_64')` to the output of `uname -m`
+
+Then run: `makepkg -d` and wait
+
 `//script does this for you btw`
 
 ## Usage
