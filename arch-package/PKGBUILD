@@ -19,9 +19,10 @@ build() {
 }
 
 package() {
-  DESTDIR="$pkgdir" cmake --install build
-  install -Dm644 "$srcdir/sanddice.png" \
-  	"$pkgdir/usr/share/sandpotnoodles/sanddice.png"
-  install -Dm644 "$srcdir/sanddice-new.desktop" \
-    "$pkgdir/usr/share/applications/sanddice-new.desktop"
+    install -d "$pkgdir/usr/bin"
+    install -d "$pkgdir/usr/share/applications"
+    install -d "$pkgdir/usr/share/sandpotnoodles"
+    install -m755 "$srcdir/build/sanddice_cpp" "$pkgdir/usr/bin/sanddice"
+    install -m644 "$srcdir/sanddice-new.desktop" "$pkgdir/usr/share/applications/"
+    install -m644 "$srcdir/sanddice.png" "$pkgdir/usr/share/sandpotnoodles/"
 }
