@@ -33,8 +33,6 @@ public:
         QObject::connect(ui.clear_btn, &QPushButton::clicked, this, &MainWindow::clear_func);
         QObject::connect(ui.pushButton, &QPushButton::clicked, this, &MainWindow::string_roll);
         QObject::connect(ui.cflip_btn, &QPushButton::clicked, this, &MainWindow::coin_flip);
-        QObject::connect(ui.label_2, &QPushButton::clicked, this, &MainWindow::other_rand); //idk why i added this
-
     }
     int diceroll() {
         int dmin, dmax, dnum;
@@ -87,3 +85,4 @@ int main(int argc, char *argv[]) {
     return app.exec();
 }
 
+#include "main.moc"
